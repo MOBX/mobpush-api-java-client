@@ -76,6 +76,9 @@
 ```
 以上是使用时设置的方式，还可以直接引用源码在mob.push.api.MobPushConfig设置
 
+* 错误码请参考 
+  [MobPush Api 错误码](http://wiki.mob.com/mobpush-rest-api-接口文档/#map-6)
+
 ## 使用DEMO 
 
 发送推送示例片段代码
