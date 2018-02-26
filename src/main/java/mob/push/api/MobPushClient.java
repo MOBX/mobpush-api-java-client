@@ -21,7 +21,7 @@ import mob.push.api.push.PushClient;
 import mob.push.api.stats.StatsClient;
 
 /**
- * ClassName:MobPushClient <br/>
+ * ClassName:MobPushClient
  * TODO ADD DESCRIPTION
  * Date: 2018年2月2日
  * Time: 下午6:11:41
@@ -41,7 +41,7 @@ public class MobPushClient {
 	/**
 	 * 推送接口 -- 发送推送
 	 * @param pushWork
-	 * @return
+	 * @return batchId 创建ID
 	 * @throws ApiException
 	 */
 	public String push(PushWork pushWork) throws ApiException{
@@ -52,7 +52,7 @@ public class MobPushClient {
 	 * 推送接口 -- 查询推送 根据BatchId
 	 * 根据创建id查询推送消息详情
 	 * @param batchId
-	 * @return
+	 * @return PushWork
 	 * @throws ApiException
 	 */
 	public PushWork pushById(String batchId) throws ApiException{
@@ -63,7 +63,7 @@ public class MobPushClient {
 	 * 推送接口 -- 查询推送 根据workno
 	 * 根据自定义编号查询消息详情
 	 * @param workno
-	 * @return
+	 * @return PushWork
 	 * @throws ApiException
 	 */
 	public PushWork pushByWorkno(String workno) throws ApiException{
@@ -74,7 +74,7 @@ public class MobPushClient {
 	 * 推送统计-- 查询推送统计
 	 * 根据创建id查询推送统计
 	 * @param batchId
-	 * @return
+	 * @return PushStats
 	 * @throws ApiException
 	 */
 	public PushStats statsById(String batchId) throws ApiException{
@@ -85,7 +85,7 @@ public class MobPushClient {
 	 * 推送统计-- 查询推送统计
 	 * 根据自定义编号查询推送统计
 	 * @param workno
-	 * @return
+	 * @return PushStats
 	 * @throws ApiException
 	 */
 	public PushStats statsByWorkno(String workno) throws ApiException{
@@ -96,7 +96,7 @@ public class MobPushClient {
 	 * 查询标签
 	 * 根据设备registrationId查询标签信息
 	 * @param registrationId
-	 * @return
+	 * @return tags 标签集合
 	 * @throws ApiException
 	 */
 	public String[] tagsByRegistrationId(String registrationId) throws ApiException{
@@ -107,7 +107,7 @@ public class MobPushClient {
 	 * 设备绑定标签
 	 * @param tags
 	 * @param registrationId
-	 * @return
+	 * @return int （仅200表示成功）
 	 * @throws ApiException
 	 */
 	public int tagsAdd(String[] tags, String registrationId) throws ApiException{
@@ -118,7 +118,7 @@ public class MobPushClient {
 	 * 删除指定设备标签
 	 * @param tags
 	 * @param registrationId
-	 * @return
+	 * @return int （仅200表示成功）
 	 * @throws ApiException
 	 */
 	public int tagsRemove(String[] tags, String registrationId) throws ApiException{
@@ -128,7 +128,7 @@ public class MobPushClient {
 	/**
 	 * 清除指定标签
 	 * @param registrationId
-	 * @return
+	 * @return tags 标签
 	 * @throws ApiException
 	 */
 	public int tagsClean(String registrationId) throws ApiException{
@@ -138,7 +138,7 @@ public class MobPushClient {
 	/**
 	 * 获取指定设备别名
 	 * @param registrationId
-	 * @return
+	 * @return alias 别名
 	 * @throws ApiException
 	 */
 	public String aliasByRegistrationId(String registrationId) throws ApiException{
@@ -149,7 +149,7 @@ public class MobPushClient {
 	 * 设备绑定别名
 	 * @param alias
 	 * @param registrationId
-	 * @return （仅200表示成功）
+	 * @return int （仅200表示成功）
 	 * @throws ApiException
 	 */
 	public int setAlias(String alias, String registrationId) throws ApiException{
@@ -159,7 +159,7 @@ public class MobPushClient {
 	/**
 	 * 清除设备别名
 	 * @param registrationId
-	 * @return
+	 * @return int （仅200表示成功）
 	 * @throws ApiException
 	 */
 	public int cleanAlias(String registrationId) throws ApiException{
@@ -168,7 +168,7 @@ public class MobPushClient {
 	
 	/**
 	 * 获取地理位置列表 -- 中国下省份列表
-	 * @return
+	 * @return List<Area>
 	 * @throws ApiException
 	 */
 	public List<Area> area() throws ApiException{
@@ -178,7 +178,7 @@ public class MobPushClient {
 	/**
 	 * 获取地理位置列表 -- 子级列表
 	 * @param parentId
-	 * @return
+	 * @return List<Area>
 	 * @throws ApiException
 	 */
 	public List<Area> area(String parentId)throws ApiException{

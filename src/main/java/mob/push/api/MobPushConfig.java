@@ -9,13 +9,13 @@
 
 package mob.push.api;
 /**
- * ClassName:MobPushConfig <br/>
+ * ClassName:MobPushConfig
  * MobPush WebApi Java Client Base Config 
  */
 public class MobPushConfig {
 	
 	/**
-	 * appkey: 需要先设置此数据，怎样获取appkey，请查看http://bbs.mob.com/forum.php?mod=viewthread&tid=8212&extra=page%3D1
+	 * appkey: 需要先设置此数据，怎样获取appkey请至http://www.mob.com官网
 	 */
 	public static String appkey ;
 	

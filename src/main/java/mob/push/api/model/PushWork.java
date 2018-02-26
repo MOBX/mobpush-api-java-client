@@ -14,7 +14,7 @@ import mob.push.api.utils.MobHelper;
 import mob.push.api.utils.TargetEnum;
 
 /**
- * ClassName:PushWork <br/>
+ * ClassName:PushWork
  * MobPush 推送实体
  * Date: 2018年2月6日
  * Time: 下午3:49:05
@@ -457,7 +457,7 @@ public class PushWork {
 	 * @param unlineTime
 	 * @param extras
 	 * @param iosProduction
-	 * @return
+	 * @return PushWork
 	 */
 	public PushWork buildExtra(Integer unlineTime,String extras,Integer iosProduction){
 		if(unlineTime != null)
@@ -477,7 +477,7 @@ public class PushWork {
 	 * @param registrationIds
 	 * @param city
 	 * @param block
-	 * @return
+	 * @return PushWork
 	 */
 	public PushWork buildTarget(Integer target, String[] tags,String[] alias,String[] registrationIds,String city,String block){
 		if(target == null || target.intValue() == TargetEnum._1.getCode()){
@@ -506,7 +506,7 @@ public class PushWork {
 	 * @param androidVoice
 	 * @param androidShake
 	 * @param androidLight
-	 * @return
+	 * @return PushWork
 	 */
 	public PushWork buildAndroid(String androidTitle, Integer androidstyle, String[] androidContent,
 			Boolean androidVoice, Boolean androidShake, Boolean androidLight) {
@@ -535,7 +535,7 @@ public class PushWork {
 	 * @param iosSlientPush
 	 * @param iosContentAvailable
 	 * @param iosMutableContent
-	 * @return
+	 * @return PushWork
 	 */
 	public PushWork bulidIos(String iosTitle, String iosSubtitle, String iosSound, Integer iosBadge, String iosCategory,
 			Integer iosSlientPush, Integer iosContentAvailable, Integer iosMutableContent) {

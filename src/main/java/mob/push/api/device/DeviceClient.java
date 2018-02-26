@@ -20,7 +20,7 @@ import mob.push.api.utils.MobHelper;
 import mob.push.api.utils.MobPushResult;
 
 /**
- * ClassName:DeviceClient <br/>
+ * ClassName:DeviceClient
  * 设备信息获取和设置，包含别名、标签
  * Date: 2018年2月6日
  * Time: 上午10:45:21
@@ -31,7 +31,7 @@ public class DeviceClient {
 	/**
 	 * 获取设备别名
 	 * @param registrationId
-	 * @return
+	 * @return alias 别名
 	 * @throws ApiException
 	 */
 	public String getDeviceAlias(String registrationId) throws ApiException {
@@ -62,7 +62,7 @@ public class DeviceClient {
 	 * 绑定设备别名，如果存在则覆盖原有别名
 	 * @param alias
 	 * @param registrationId
-	 * @return
+	 * @return int 
 	 * @throws ApiException
 	 */
 	public int setDeviceAlias(String alias, String registrationId) throws ApiException {
@@ -90,7 +90,7 @@ public class DeviceClient {
 	/**
 	 * 清空设备别名
 	 * @param registrationId
-	 * @return
+	 * @return int 
 	 * @throws ApiException
 	 */
 	public int cleanDeviceAlias(String registrationId) throws ApiException {
@@ -118,7 +118,7 @@ public class DeviceClient {
 	/**
 	 * 获取设备标签
 	 * @param registrationId
-	 * @return
+	 * @return tags 标签集合
 	 * @throws ApiException
 	 */
 	public String[] getDeviceTags(String registrationId) throws ApiException {
@@ -157,7 +157,7 @@ public class DeviceClient {
 	 * 设备绑定标签
 	 * @param tags
 	 * @param registrationId
-	 * @return
+	 * @return int 
 	 * @throws ApiException
 	 */
 	public int addDeviceTags(String[] tags, String registrationId) throws ApiException {
@@ -187,10 +187,10 @@ public class DeviceClient {
 	}
 
 	/**
-	 * 删除设备制定标签
+	 * 删除设备指定标签
 	 * @param tags
 	 * @param registrationId
-	 * @return
+	 * @return int 
 	 * @throws ApiException
 	 */
 	public int removeDeviceTags(String[] tags, String registrationId) throws ApiException {
@@ -222,7 +222,7 @@ public class DeviceClient {
 	/**
 	 * 清空设备标签
 	 * @param registrationId
-	 * @return
+	 * @return int 
 	 * @throws ApiException
 	 */
 	public int cleanDeviceTags(String registrationId) throws ApiException {

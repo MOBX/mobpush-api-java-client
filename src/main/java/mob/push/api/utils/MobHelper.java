@@ -12,7 +12,7 @@ package mob.push.api.utils;
 import java.nio.charset.Charset;
 
 /**
- * ClassName:MobHelper <br/>
+ * ClassName:MobHelper
  * TODO ADD DESCRIPTION
  * Date: 2018年2月6日
  * Time: 下午5:14:47

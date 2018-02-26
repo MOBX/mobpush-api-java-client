@@ -185,8 +185,7 @@ public class HttpUtils {
 		}
 
 		/**
-		 * 键值对排序
-		 * @return
+		 * 键值对排序 
 		 */
 		public String sort() {
 			StringBuffer buffer = new StringBuffer();

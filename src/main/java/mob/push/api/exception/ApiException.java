@@ -9,7 +9,7 @@
 
 package mob.push.api.exception;
 /**
- * ClassName:ApiException <br/>
+ * ClassName:ApiException
  * TODO ADD DESCRIPTION
  * Date: 2018年2月6日
  * Time: 上午11:07:10

@@ -12,7 +12,7 @@ package mob.push.api.utils;
 import java.io.Serializable;
 
 /**
- * ClassName:MobPushResult <br/>
+ * ClassName:MobPushResult
  * TODO MobPush HTTP 接口返回数据
  * Date: 2018年2月5日
  * Time: 下午7:46:25 

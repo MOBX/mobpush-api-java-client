@@ -22,7 +22,7 @@ import mob.push.api.utils.MobHelper;
 import mob.push.api.utils.MobPushResult;
 
 /**
- * ClassName:AreaClient <br/>
+ * ClassName:AreaClient
  * TODO 获取地理位置列表信息
  * Date: 2018年2月5日
  * Time: 下午7:39:59  
@@ -31,7 +31,7 @@ public class AreaClient {
 	 
 	/**
 	 * 获取地理位置列表 -- 中国下省份列表
-	 * @return
+	 * @return List<Area> 
 	 * @throws ApiException 
 	 */
 	public List<Area> getArea() throws ApiException{
@@ -41,7 +41,7 @@ public class AreaClient {
 	/**
 	 * 获取地理位置列表 -- 子级列表
 	 * @param parentId 如果查询最上级则传入null即可
-	 * @return
+	 * @return List<Area> 
 	 * @throws ApiException 
 	 */
 	public List<Area> getArea(String parentId) throws ApiException{  

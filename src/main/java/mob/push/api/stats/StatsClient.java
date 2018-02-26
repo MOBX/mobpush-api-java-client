@@ -20,7 +20,7 @@ import mob.push.api.utils.HttpUtils;
 import mob.push.api.utils.MobPushResult;
  
 /**
- * ClassName:StatsClient <br/>
+ * ClassName:StatsClient
  * 获取统计数据接口
  */
 public class StatsClient {
@@ -29,7 +29,7 @@ public class StatsClient {
 	/**
 	 * 获取统计数据(根据batchId查询)
 	 * @param batchId
-	 * @return
+	 * @return PushStats
 	 * @throws ApiException
 	 */
 	public PushStats getStatsByBatchId(String batchId) throws ApiException{
@@ -43,7 +43,7 @@ public class StatsClient {
 	/**
 	 * 获取统计数据(根据workno查询)
 	 * @param workno
-	 * @return
+	 * @return PushStats
 	 * @throws ApiException
 	 */
 	public PushStats getStatsByWorkno(String workno) throws ApiException{
@@ -57,7 +57,7 @@ public class StatsClient {
 	/**
 	 * 拉取推送任务统计
 	 * @param path
-	 * @return
+	 * @return PushStats
 	 * @throws ApiException
 	 */
 	private PushStats pullStats(String path) throws ApiException{

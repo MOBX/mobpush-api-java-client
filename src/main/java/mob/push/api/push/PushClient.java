@@ -21,7 +21,7 @@ import mob.push.api.utils.PushTypeEnum;
 import mob.push.api.utils.TargetEnum;
  
 /**
- * ClassName:DeviceClient <br/>
+ * ClassName:DeviceClient
  * 推送接口，包含查询和创建推送 
  */
 public class PushClient {
@@ -92,7 +92,7 @@ public class PushClient {
 	/**
 	 * 推送详情（根据batchId查询）
 	 * @param batchId
-	 * @return
+	 * @return PushWork
 	 * @throws ApiException
 	 */
 	public PushWork getPushByBatchId(String batchId) throws ApiException{
@@ -106,7 +106,7 @@ public class PushClient {
 	/**
 	 * 推送详情（根据workno查询）
 	 * @param workno
-	 * @return
+	 * @return PushWork
 	 * @throws ApiException
 	 */
 	public PushWork getPushByWorkno(String workno) throws ApiException{
@@ -120,7 +120,7 @@ public class PushClient {
 	/**
 	 * 拉取推送详情
 	 * @param path
-	 * @return
+	 * @return PushWork
 	 * @throws ApiException
 	 */
 	private PushWork pullPush(String path) throws ApiException{

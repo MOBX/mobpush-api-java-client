@@ -12,7 +12,7 @@
 
 **免费使用**、**自定义UI**、**稳定服务**、**流程体验**、**数据同步**、**专业技术团队服务**
 
-## 接口
+# 接口
 * 推送接口
 	* 发送推送
 	* 查询推送（根据batchId）
@@ -29,13 +29,33 @@
 * 公共接口
 	* 地理位置信息接口	
 
-## jar包依赖说明
+# 使用方式
 
-主要需要依赖httpclient.jar 、fastjson.jar
+* ## maven集成方式
+
+
+
+使用maven的方式，只需要将下面的maven配置加入您的项目pom.xml即可
+
+```xml
+<dependency>
+    <groupId>com.mob.sdk.push</groupId>
+    <artifactId>mobpush-api-java-client</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+[*MobPush client for Java Maven中央仓库地址*](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22mobpush-api-java-client%22)
+
+* ## 源码编译
+
+    主要需要依赖httpclient.jar 、fastjson.jar,日志相关包可以按需求使用
+
+    下载项目代码后可根据具体项目按照如下方式使用：
 
 * 如果使用 Maven 构建项目，则需要在你的项目 pom.xml 里增加：
 
-```xml
+ ```xml
+
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
@@ -68,7 +88,7 @@
 
 * 如果不使用 Maven 构建项目，则项目 libs/ 目录下有依赖的 jar 可复制到你的项目里去。
  
-## 使用注意事项
+# 使用注意事项
 * 初始化appkey、appSecret
 ```Java
    MobPushConfig.appkey = "moba6b6c6d6";
@@ -79,25 +99,30 @@
 * 错误码请参考 
   [MobPush Api 错误码](http://wiki.mob.com/mobpush-rest-api-接口文档/#map-6)
 
-## 使用DEMO 
+
+
+# 使用示例 
 
 发送推送示例片段代码
 
 ```Java
- PushWork push = new PushWork(PlatEnum.all.getCode(),"test content" , PushTypeEnum.notify.getCode()) //初始化基础信息
+
+MobPushConfig.appkey = "moba6b6c6d6";
+MobPushConfig.appSecret = "";
+PushWork push = new PushWork(PlatEnum.all.getCode(),"test content" , PushTypeEnum.notify.getCode()) //初始化基础信息
 				.buildTarget(TargetEnum._1.getCode(), null, null, null, null, null)  // 设置推送范围
 				.buildAndroid("Android Title", AndroidNotifyStyleEnum.normal.getCode(), null, true, true, true) //定制android样式
 				.bulidIos("ios Title", "ios Subtitle", null, 1, null, null, null, null) //定制ios设置
 				.buildExtra(1, "{\"key1\":\"value\"}", 1) // 设置扩展信息
 				;
 		
-		PushClient client = new PushClient();
-		try {
-			client.sendPush(push);
-		} catch (ApiException e) {
-			e.getStatus();	   	   //错误请求状态码
-			e.getErrorCode();	       //错误状态码
-			e.getErrorMessage();        //错误信息 
-		}
+PushClient client = new PushClient();
+try {
+    client.sendPush(push);
+ catch (ApiException e) {
+    e.getStatus();	   	   //错误请求状态码
+    e.getErrorCode();	       //错误状态码
+    e.getErrorMessage();        //错误信息 
+}
 
 ```
