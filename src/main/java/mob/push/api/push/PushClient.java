@@ -57,7 +57,7 @@ public class PushClient {
 	 * @throws ApiException
 	 */
 	public String sendPush(PushWork pushWork) throws ApiException{
-		String path = MobPushConfig.pushUrl + "/push";
+		String path = MobPushConfig.pushUrl + "/v2/push";
 		if(pushWork.getAppkey() == null){
 			 pushWork.setAppkey(MobPushConfig.appkey);
 		}
