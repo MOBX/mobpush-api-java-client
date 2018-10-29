@@ -495,6 +495,7 @@ public class PushWork {
 		}if(target.intValue() == TargetEnum._6.getCode() && MobHelper.isNotBlank(block)){
 			this.block = block;
 		}
+		this.target = target;
 		return this;
 	}
 
