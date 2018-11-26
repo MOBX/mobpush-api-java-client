@@ -178,6 +178,15 @@ public class PushWork {
 	 * 需要在附加字段中配置相应参数
 	 */
 	private Integer iosMutableContent;
+
+	/**
+	 * moblink功能的的uri
+	 */
+	private String scheme;
+	/**
+	 * moblink功能的参数
+	 */
+	private String data;
 	
 	public PushWork(){
 		
@@ -451,7 +460,23 @@ public class PushWork {
 	public void setIosMutableContent(Integer iosMutableContent) {
 		this.iosMutableContent = iosMutableContent;
 	}
-	
+
+	public String getScheme() {
+		return scheme;
+	}
+
+	public void setScheme(String scheme) {
+		this.scheme = scheme;
+	}
+
+	public String getData() {
+		return data;
+	}
+
+	public void setData(String data) {
+		this.data = data;
+	}
+
 	/**
 	 * 设置扩展信息
 	 * @param unlineTime
