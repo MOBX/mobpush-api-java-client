@@ -33,19 +33,6 @@
 
 * ## maven集成方式
 
-
-
-使用maven的方式，只需要将下面的maven配置加入您的项目pom.xml即可
-
-```xml
-<dependency>
-    <groupId>com.mob.sdk.push</groupId>
-    <artifactId>mobpush-api-java-client</artifactId>
-    <version>1.0.0</version>
-</dependency>
-```
-[*MobPush client for Java Maven中央仓库地址*](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22mobpush-api-java-client%22)
-
 * ## 源码编译
 
     主要需要依赖httpclient.jar 、fastjson.jar,日志相关包可以按需求使用
